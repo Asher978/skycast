@@ -26,3 +26,6 @@ server.listen(PORT, () => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
+const weatherRoutes = require('./routes/weather-routes');
+app.use('/weather', weatherRoutes);
